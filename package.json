@@ -1,0 +1,19 @@
+{
+  "name": "socketio-test",
+  "version": "1.0.0",
+  "description": "Socket io test app",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.9.0",
+    "express": "^4.9.8",
+    "locus": "^0.1.0",
+    "method-override": "^2.3.0",
+    "mongoose": "^3.8.17",
+    "morgan": "^1.4.0"
+  }
+}
