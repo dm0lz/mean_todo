@@ -10,3 +10,27 @@ header{
 .todo_form{
   margin-top: 30px;
 }
+
+.animate-line.ng-enter {
+  -webkit-transition:all linear 0.5s;
+  transition:all linear 0.5s;
+}
+
+.animate-line.ng-enter {
+  opacity:0;
+  //max-height:0;
+}
+
+.animate-line.ng-enter.ng-enter-active {
+  opacity:1;
+  //max-height:40px;
+}
+
+.animate-line.ng-enter-stagger {
+  /* 200ms will be applied between each sucessive enter operation */ 
+  -webkit-transition-delay:0.2s;
+  transition-delay:0.2s;
+  /* this is here to avoid accidental CSS inheritance */
+  -webkit-transition-duration:0;
+  transition-duration:0;
+}
