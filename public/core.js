@@ -6,9 +6,7 @@ SocketIo.run(function(editableOptions) {
 
 SocketIo.controller('MainCtrl', ['$scope', '$http', function($scope, $http){
 
-  $scope.name = "Oli";
   $scope.formData = {};
-
 
   $http.get('/api/todos')
     .success(function(data) {
