@@ -7,8 +7,10 @@
     <title>Starter Template</title>
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
     <link href="./stylesheets/main.css" rel="stylesheet">
+    <link href="./stylesheets/xeditable.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0/angular.min.js"></script>
     <script src="core.js"></script>
+    <script src="./javascript/xeditable.min.js"></script>
   </head>
   <body ng-app="socket-io">
 
@@ -40,8 +42,11 @@
               </thead>
               <tbody ng-repeat="todo in todos | orderBy: 'text'">
                 <tr>
-                  <td>{{todo.text}}</td>
-                  <td>{{todo._id}}</td>
+                  <!--<td>{{todo.text}}</td>-->
+                  <td>
+                    <a href="#" editable-text="todo.text" onbeforesave="updateTodo($data, todo._id)">{{ todo.text }}</a>
+                  </td>
+                  <td>{{ todo._id }}</td>
                   <td><button type="submit" ng-click="deleteTodo(todo._id)" class="btn btn-danger">delete</button></td>
                 </tr>
               </tbody>
